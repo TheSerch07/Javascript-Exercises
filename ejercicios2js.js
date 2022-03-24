@@ -50,5 +50,5 @@ function deletePattern (string, pattern) {
     }
 }
 
-console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"))
-console.log(deletePattern("xd1, xd2, xd3, xd4 y xd5", "xd"))
+// console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"))
+// console.log(deletePattern("xd1, xd2, xd3, xd4 y xd5", "xd"))

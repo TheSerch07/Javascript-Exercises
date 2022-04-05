@@ -7,4 +7,31 @@ function binaryToDecimal(number, base) {
     else return parseInt(number, base)
 }
 
-console.log(binaryToDecimal(100, 2))
+// console.log(binaryToDecimal(100, 2))
+// console.log(binaryToDecimal(110011, 2))
+// console.log(binaryToDecimal("1001", 2))
+// console.log(binaryToDecimal(100110, "2"))
+
+function discount(base, discount) {
+    if (typeof base !== "number" || typeof discount !== "number") return null
+    else return base - base * (discount / 100)
+}
+
+// console.log(discount(188900, 20))
+// console.log(discount(1000, 90))
+// console.log(discount("500", 35))
+// console.log(discount(2500, "25"))
+// console.log(new Date(2000, 2, 7))
+
+function countYears(date) {
+    if(!(date instanceof Date)) return null
+    else {
+        const actuallyYear = new Date()
+        const year = new Date(date)
+        return actuallyYear.getFullYear() - year.getFullYear() + " años"
+    }
+}
+
+// console.log(countYears(new Date(2000, 2, 7)))
+// console.log(countYears(new Date(1985, 4, 23)))
+// console.log(countYears(2000, 2, 7))

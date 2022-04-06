@@ -23,5 +23,25 @@ function findWords(string) {
 // console.log(findWords("Hola Mundo"))
 
 function validName(name) {
+    let validate = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/g
     if (typeof name !== "string") return null
+    else if (validate.test(name)) return true
+    else return false
 }
+
+// console.log(validName("Sergio García"))
+// console.log(validName("Natalia Moreno"))
+// console.log(validName("jaqueline lozano"))
+// console.log(validName({nombre: "Sergio"}))
+
+function validEmail(email) {
+    let validate = /[\w]+@{1}[\w]+\.[a-z]{2,3}/
+    if (typeof email !== "string") return null
+    else if (validate.test(email)) return true
+    else return false 
+}
+
+// console.log(validEmail("jejog50@gmail.com"))
+// console.log(validEmail("natalia.trabajo08@gmail.com"))
+// console.log(validEmail("jackymologmail.com"))
+// console.log(validEmail("garrex2003@yahooes"))

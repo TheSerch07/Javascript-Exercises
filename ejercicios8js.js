@@ -26,6 +26,28 @@ function sortNumbers(array) {
 function duplicateDelete(array) {
     if (!Array.isArray(array)) return null
     else {
-        
+        const filter = array.filter((array2, index) => {
+            return array.indexOf(array2) === index
+        })
+        return filter
     }
 } 
+
+// console.log(duplicateDelete(["x", 10, "x", 2, "10", 10, true, true]))
+// console.log(duplicateDelete(["xd", "xd", false, true, false, "a", "a"])) 
+// console.log(duplicateDelete({array: ["xd", true, 23]}))
+
+function averageValue(array) {
+    if (!Array.isArray(array)) return null
+    else {
+        let total = 0
+        array.map((array) => {
+            total += array
+        })
+        return Math.round(total / array.length) 
+    }
+}
+
+console.log(averageValue([9,8,7,6,5,4,3,2,1,0]))
+console.log(averageValue([20, 77, 32, 15, 7, 4, 10]))
+console.log(averageValue({a: [10, 20, 30 ,40]}))

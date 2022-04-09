@@ -30,6 +30,7 @@ class Pelicula {
         this.validateRelaseYear(relaseYear)
         this.validateCountries(countries)
         this.validateGender(gender)
+        this.validateClassification(classification)
 
         this.iMDB = iMDB
         this.title = title
@@ -90,7 +91,7 @@ class Pelicula {
 
     validateCountries(countries) {
         if (this.validateArray(countries))
-        if ((countries.filter((array) => {if (typeof array !== "string") return array})).length > 0) throw console.log("Solo puedes enviar datos tipo string en el array!")
+        if ((countries.filter((array) => {if (typeof array !== "string") return array})).length > 0) throw console.error("Solo puedes enviar datos tipo string en el array!")
     }
 
     validateGender(gender) {
@@ -101,11 +102,11 @@ class Pelicula {
 
     validateClassification(classification) {
         if (this.validateNumber(classification))
-        throw
+        if (classification < 0 || classification > 10) throw console.error("La calificación debe ser en 1 y 10!")
     }
 }
 
-const peli = new Pelicula({iMDB: "AB7894561", title: "Avengers", director: "Hermanos Russo", relaseYear: 2019, countries: ["USA", "Colombia"], gender: [ "Action", "Adventure", "Family"], classification: "hola"})
+const peli = new Pelicula({iMDB: "AB7894561", title: "Avengers", director: "Hermanos Russo", relaseYear: 2019, countries: ["USA", "Colombia"], gender: [ "Action", "Adventure", "Family"], classification: 9.5})
 // const peli2 = new Pelicula("A78945612", "hola", "hola", "hola", "hola", "hola", "hola")
 
 console.log(peli)

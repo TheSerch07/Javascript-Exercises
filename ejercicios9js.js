@@ -45,6 +45,16 @@ class Pelicula {
     static genders() {
         return ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War", "Western"]
     }
+
+    fichaTecnica() {
+        console.log({"IMDB": this.iMDB,
+            "Title": this.title,
+            "Director": this.director,
+            "RelaseYear": this.relaseYear,
+            "Countries": this.countries,
+            "Gender": this.gender,
+            "Classification": this.classification})
+    }
         
     
     validateString(value) {
@@ -110,6 +120,12 @@ const peli = new Pelicula({iMDB: "AB7894561", title: "Avengers", director: "Herm
 // const peli2 = new Pelicula("A78945612", "hola", "hola", "hola", "hola", "hola", "hola")
 
 console.log(peli)
+
+const aPelis = [{iMDB: "SY1510216", title: "ADMV", director: "Sergio García", relaseYear: 2022, countries: ["Colombia"], gender: ["Adult", "Drama", "Romance"], classification: 9.8}, 
+{iMDB: "CG2604218", title: "Consen Movie", director: "Steven Spielberg", relaseYear: 2022, countries: ["USA", "Colombia"], gender: ["Biography", "Drama", "Animation"], classification: 9.9}, 
+{iMDB: "SG0702201", title: "Serch", director: "Martin Scorsese", relaseYear: 2022, countries: ["USA", "Colombia"], gender: ["Biography", "Drama", "Animation"], classification: 9.9}]
 // console.log(peli2)
+const lPelis = aPelis.forEach(liP => new Pelicula(liP).fichaTecnica())
+
 
 // console.log(Pelicula.genders())

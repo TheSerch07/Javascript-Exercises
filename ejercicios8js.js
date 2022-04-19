@@ -48,6 +48,6 @@ function averageValue(array) {
     }
 }
 
-console.log(averageValue([9,8,7,6,5,4,3,2,1,0]))
-console.log(averageValue([20, 77, 32, 15, 7, 4, 10]))
-console.log(averageValue({a: [10, 20, 30 ,40]}))
+// console.log(averageValue([9,8,7,6,5,4,3,2,1,0]))
+// console.log(averageValue([20, 77, 32, 15, 7, 4, 10]))
+// console.log(averageValue({a: [10, 20, 30 ,40]}))
